@@ -14,3 +14,4 @@
 /captures
 .externalNativeBuild
 app/java/res/values/strings.xml
+/app/src/main/res/values/strings.xml
