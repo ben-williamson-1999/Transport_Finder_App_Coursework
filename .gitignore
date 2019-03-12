@@ -13,3 +13,4 @@
 /build
 /captures
 .externalNativeBuild
+*/res/values/strings.xml
