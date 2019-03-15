@@ -23,6 +23,10 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
+
+import mmu.stu.ac.coursework.transport_finder_app.model.TransportLocation;
+import mmu.stu.ac.coursework.transport_finder_app.network.NetworkConnection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
 
-    private ArrayList<String> listItems = new ArrayList<>();
+    private List<TransportLocation> listItems;
 
     private MapView mapView;
 
@@ -60,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void setListItems(List<TransportLocation> list){
+        this.listItems = list;
+    }
+
     @Override
     protected void onStart(){
         super.onStart();
@@ -67,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        new GetDataClass().execute("http://zebedee.kriswelsh.com:8080/stations?latitude=53.472&longitude=-2.244&type=station");
+        new NetworkConnection().execute("http://zebedee.kriswelsh.com:8080/stations?latitude=53.472&longitude=-2.244&type=station");
     }
 
     private class GetDataClass extends AsyncTask<String, Integer, String>{
