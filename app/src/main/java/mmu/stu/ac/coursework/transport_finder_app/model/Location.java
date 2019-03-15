@@ -2,24 +2,24 @@ package mmu.stu.ac.coursework.transport_finder_app.model;
 
 public class Location {
 
-    private String longitude;
+    private Double longitude;
 
-    private String latitude;
+    private Double latitude;
 
-    public String getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public Location setLongitude(String longitude) {
+    public Location setLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
 
-    public String getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public Location setLatitude(String latitude) {
+    public Location setLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
     }
