@@ -48,6 +48,14 @@ import mmu.stu.ac.coursework.transport_finder_app.model.TransportLocation;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*
+    @Before
+     */
+
+    /*
+    facade
+     */
+
     private Button button;
 
     private List<TransportLocation> listItems;
